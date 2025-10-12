@@ -1,0 +1,16 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Regression Suite" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.javaselenium.listeners.TestListener"/>
+        <listener class-name="com.javaselenium.listeners.RetryListener"/>
+    </listeners>
+
+    <test name="UI Tests">
+        <parameter name="browser" value="chrome"/>
+        <classes>
+            <class name="com.javaselenium.tests.LoginTest"/>
+            <class name="com.javaselenium.tests.HomeTest"/>
+            <class name="com.javaselenium.tests.PracticeTest"/>
+        </classes>
+    </test>
+</suite>
