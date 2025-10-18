@@ -15,6 +15,7 @@ public class DriverFactory {
             switch (browser.toLowerCase()) {
                 case "chrome":
                     WebDriverManager.chromedriver().setup();
+                    System.out.println("Chrome driver has been set");
                     ChromeOptions options = new ChromeOptions();
                     options.addArguments("--start-maximized");
                     tlDriver.set(new ChromeDriver(options));
